@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function validate(){
+			var firstname=document.getElementById("firstname").value
+			var firstnamecheck=/^[a-zA-Z ]+$/
+			var mobile=document.getElementById("mobile").value
+			var mobilecheck=/^[0-9]{10}$/
+			var gmail=document.getElementById("gmail").value
+			var gmailcheck=/^[a-zA-Z0-9]+@[a-z]+\.[a-z]{2,3}$/
+
+			if(firstname==""||firstname.length<3){
+				alert("please enter your name")
+				return false
+			}
+			if(!firstname.match(firstnamecheck)){
+				alert("Name must carry characters")
+				return false
+			}
+			if(!mobile.match(mobilecheck)){
+				alert("mobile number must carry 10 digits")
+				return false
+			}
+			if(!gmail.match(gmailcheck)){
+				alert("pleae enter your gmail id")
+				return false
+			}
+
+			return true
+		}
+	</script>
+</head>
+<body>
+	<form onsubmit="return validate()">
+		<p><input placeholder="Enter your name" id="firstname"/></p>
+		<p><input placeholder="Enter mobile number"id="mobile"/></p>
+		<p><input placeholder="enter gmail id"id="gmail"/></p>
+		<button>Submit</button>
+	</form>
+
+</body>
+</html>

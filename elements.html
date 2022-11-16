@@ -7,7 +7,8 @@
 	<script type="text/javascript">
 		function user(){
 			var UserName=document.getElementById("username").value
-			var textdata=document.getElementsByClassName("para")
+			document.getElementById("Hari").innerHTML=UserName
+			/*var textdata=document.getElementsByClassName("para")
 			console.log(textdata.length)
 			for(var i=0;i<textdata.length;i++){
 				console.log(textdata[i].innerHTML)
@@ -15,13 +16,15 @@
 			var listoful=document.getElementsByTagName("li")
 			for(var c=0;c<listoful.length;c++){
 				console.log(listoful[c].innerHTML)
-			}
+			}*/
 		}
 	</script>
 </head>
 <body>
 	<input id="username"/>
-	<p class="para">how are you</p>
+	<h1>Name is:<span id="Hari">i am a good boy</span></h1>
+
+	 <!-- <p class="para">how are you</p>
 	<p class="para">i am feeling good</p>
 	<h1 class="para">i am chinni</h1>
 	<ul>
@@ -30,8 +33,8 @@
 		<li>banana</li>
 		<li>pomegranate</li>
 		<li>orange</li>
-	</ul>
-	<button onclick="user()">submit</button>
+	</ul> -->
+	<button onclick="user()">submit</button> 
 
 </body>
 </html>
